@@ -39,3 +39,6 @@ if __name__ == "__main__":
 
 # Cron job (add this to your crontab):
 # 0 8 * * * /usr/bin/python3 /path/to/quote_generator.py >> /path/to/daily_quote.txt
+
+# my crontab code:
+# 0 8 * * * /usr/bin/python3 /workspaces/03-data-structures-zfeng000/01-daily_quote.py >> /workspace/03-data-structures-zfeng000/01-daily_quote_output.txt
