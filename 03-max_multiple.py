@@ -48,14 +48,14 @@ def find_greatest_product(number_string, adjacent_digits=13):
         # range() creates a range of numbers from 0 to the total substring number
         current_slice = number_string[i:i + adjacent_digits]
     
-    # calculate the product of these digits
-    product = 1
-    for digit in current_slice:
-        product *= int(digit) # transform into integer for mathematical operation
+        # calculate the product of these digits
+        product = 1
+        for digit in current_slice:
+            product *= int(digit) # transform into integer for mathematical operation
 
-    # update max_product if new product is larger
-    if product > max_product:
-        max_product = product
+        # update max_product if new product is larger
+        if product > max_product:
+            max_product = product
 
     return max_product
 
