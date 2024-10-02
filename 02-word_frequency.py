@@ -21,8 +21,18 @@ import sys
 
 def word_frequency(text):
     frequencies = {} # Dictionary to store word frequencies
+    
+    text = text.lower() # convert text to all lower cases to ignore case
 
-    # Your code here
+    text = text.translate(str.maketrans("", "", '!"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~')) # remove punctuation
+
+    words = text.split() # split the text into words
+
+    for word in words:
+        if word in frequencies:
+            frequencies[word] += 1
+        else:
+            frequencies[word] = 1
     
     return frequencies
 

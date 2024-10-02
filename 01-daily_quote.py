@@ -16,13 +16,21 @@ from datetime import date
 
 
 quotes = [
-    # Create a list of quotes here
+    "What we call the beginning is often the end. And to make an end is to make a beginning. The end is where we start from. ― T.S. Eliot",
+    "Half the harm that is done in this world is due to people who want to feel important. They don't mean to do harm; but the harm does not interest them. Or they do not see it, or they justify it because they are absorbed in the endless struggle to think well of themselves. ― T.S. Eliot",
+    "Poetry is not a turning loose of emotion, but an escape from emotion; it is not the expression of personality but an escape from personality. But, of course, only those who have personality and emotion know what it means to want to escape from these. ― T.S. Eliot",
+    "For us, there is only the trying. The rest is not our business. ― T.S. Eliot",
+    "I learn a great deal by merely observing you, and letting you talk as long as you please, and taking note of what you do not say. ― T.S. Eliot",
+    "Only those who will risk going too far can possibly find out how far one can go. ― T.S. Eliot",
+    "To do the useful thing, to say the courageous thing, to contemplate the beautiful thing: that is enough for one man's life. ― T.S. Eliot"
 ]
 
 def get_quote_of_the_day(quotes):
     todays_quote = None
 
-    # Your code here
+    today = date.today()
+    random.seed(today.toordinal())
+    todays_quote = random.choice(quotes)
     
     return todays_quote
 
