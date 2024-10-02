@@ -41,7 +41,21 @@ THOUSAND_DIGIT_NUMBER = """
 def find_greatest_product(number_string, adjacent_digits=13):
     max_product = 0
     
-    # Your code here
+    # loop through the number_string (the long string of 1000 digits, aka the THOUSAND_DIGIT_NUMBER)
+    for i in range(len(number_string) - adjacent_digits + 1): # (len(number_string)-adjacent_digits+1) calculates how many 
+        # valid slices (substrings) of 13 adjacent digits we can take from number_string; +1 because in Python slicing, the range is
+        # inclusive of the start index but exclusive of the end index, so we need to +1 to capture the last valid slice.
+        # range() creates a range of numbers from 0 to the total substring number
+        current_slice = number_string[i:i + adjacent_digits]
+    
+    # calculate the product of these digits
+    product = 1
+    for digit in current_slice:
+        product *= int(digit)
+
+    # update max_product if new product is larger
+    if product > max_product:
+        max_product = product
 
     return max_product
 
